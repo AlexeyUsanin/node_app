@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "createDir": "node main.js",
-    "start": "node main.js"
+    "createDir": "node createDir.js",
+    "start": "node getWeather.js"
   },
   "repository": {
     "type": "git",
