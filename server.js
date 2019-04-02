@@ -38,8 +38,10 @@ const server = http.createServer((req, res) => {
       res.end('<strong>404! Page not found!</strong>');
       throw new Error('Error while reading index.html');
     }
-    
-    res.end(`${data} <h2>${new Date().toLocaleString()}</h2>`);
+
+    res.setHeader('Content-Type', 'text/html');
+    res.end(data.replace(`</body>`, `<h2>${new Date().toLocaleString()}</h2></body>`));
+    res.end(data);
   });
 
 });
